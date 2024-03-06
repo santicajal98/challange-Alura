@@ -50,9 +50,7 @@ function inputTexto(textoIngresado){
         }
     }else{
         //controlo que la imagen exista antes de eliminarla y crear el elemento que la va a reemplazar
-        console.log(controlExistencia(1) == false);
         if(controlExistencia(1) == false){
-            console.log('entra');
             removerContenido();
             crearElemento();
         }
@@ -71,7 +69,6 @@ function inputTexto(textoIngresado){
 function controlExistencia(control){
     if (control == 1){
         let imagen = document.getElementById('imagen-salida');
-        console.log(imagen)
         if(imagen == undefined){
             return true;
         }else{
