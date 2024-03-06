@@ -128,11 +128,15 @@
         font-weight: lighter;
     }
     .textoSalida{
-        margin: 2em auto;
+        grid-row: 50;
+        margin: 1em auto;
+        padding: 0 auto;
+        height: 27em;
+        border: none;
         resize: none;
         display: flex;
         justify-content: center;
-        background-color: rgb(196, 190, 190);
+        background-color: rgb(255, 255, 255);
         font-size: medium;
         font-family:'Franklin Gothic Medium';
     }

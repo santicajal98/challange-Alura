@@ -102,6 +102,8 @@ function crearElemento(){
     const div = document.querySelector('.contenedor-salida');
     const elemento = document.createElement('textarea');
     elemento.classList ='textoSalida';
+    elemento.rows = "40";
+    elemento.cols = "30";
     div.appendChild(elemento);
 }
 
