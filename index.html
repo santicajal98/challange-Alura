@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width">
+    <title>Encriptador de mensajes de Alura</title>
+    <link rel="icon" href="/img/icono.png">
+    <link rel="stylesheet" href="reset.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <video src="/vids/Matrix Rain Codes (4K FULL HD).mp4" muted="false" autoplay="true" loop="true" poster="" playbackRate="0.7"></video>
+    <header>
+            <h1>Pagina de Encriptado y Desencriptado de mensajes</h1>
+    </header>
+    <main>
+        <div class="areaTexto">
+            <div class="primero">
+                <input oninput="inputTexto(this.value)" type="text" id="intro" required>
+            </div>
+            <div class="segundo" >
+                <img id="salida" src="/img/1.png" alt="">
+            </div>
+        </div>
+        <div class="botones">   
+            <div class="botonesEncriptacion">
+                <button class="encriptarBoton" onclick="habilitarBoton(1)">Encriptar</button>
+                <button class="desencriptarBoton" onclick="habilitarBoton(2)" >Desencriptar</button>
+            </div>
+            <div class="botonCopia" onclick="botonCopiar()">
+                <button class="botonCopiar">Copiar</button>
+            </div>
+        </div>
+    </main>
+    <footer>
+        <p>&copy Copyright Santiago Cajal 2024.Todos los derechos reservados.</p>
+    </footer>
+    <!-- <script src="app.js"></script> -->
+    <script src="script.js"></script>
+</body>
+</html>
