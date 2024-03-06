@@ -30,37 +30,48 @@ function habilitarBoton(value){
 //funcion que interactua con el ingreso de texto en el input, si no hay texto dentro no realiza el encriptado o desencriptado
 function inputTexto(textoIngresado){
     //el siguiente if controla si el input tiene texto o no, en caso de no tener en la ventana de transcripcion pone una imagen que indica que no hay texto
-    if (textoIngresado === ""){    
-        const div = document.querySelector('.segundo');
-        const elemento = document.createElement('img');
-        elemento.src = '/img/1.png';
-        elemento.id = 'salida'
-        div.appendChild(elemento);
+    if (textoIngresado === ""){  
+        const div = document.querySelector('.contenedor-salida');
+        const imagen = document.createElement('img');
+        imagen.src = 'img/icono.png';
+        imagen.id = "imagen-salida";
+        div.appendChild(imagen);
+        const titulo = document.createElement('h2')
+        titulo.textContent = 'NINGUN MENSAJE ENCONTRADO';
+        titulo.classList = 'titulo-salida';
+        div.appendChild(titulo);
+        const subtitulo = document.createElement('p')
+        subtitulo.classList = 'subtitulo-salida';
+        subtitulo.textContent = 'Ingrese un texto para encriptar o desencriptar';
+        div.appendChild(subtitulo);
         while(controlExistencia(2) == false){
             const elementoTranscripto = document.querySelector('.textoSalida');
             elementoTranscripto.remove();
         }
     }else{
-            //controlo que la imagen exista antes de eliminarla y crear el elemento que la va a reemplazar
-            if(controlExistencia(1) == false){
-                removerImagen();
-                crearElemento();
-            }
+        //controlo que la imagen exista antes de eliminarla y crear el elemento que la va a reemplazar
+        console.log(controlExistencia(1) == false);
+        if(controlExistencia(1) == false){
+            console.log('entra');
+            removerContenido();
+            crearElemento();
+        }
     }
     //esta seccion indica que si el input tiene texto se lo encripte o desencripte
     if (document.querySelector('#intro').value != "" && condicionEncriptador == 1){
         var traduccion = encriptador(textoIngresado);
-        document.querySelector('.textoSalida').value= traduccion;
+        document.querySelector('.textoSalida').value = traduccion;
     }
     if (document.querySelector('#intro').value != "" && condicionEncriptador == 2){
         var traduccion = desencriptador(textoIngresado);
-        document.querySelector('.textoSalida').value= traduccion;
+        document.querySelector('.textoSalida').value = traduccion;
     }
 }
 //funcion para controlar la existencia de un elemento de html
 function controlExistencia(control){
     if (control == 1){
-        let imagen = document.querySelector('#salida')
+        let imagen = document.getElementById('imagen-salida');
+        console.log(imagen)
         if(imagen == undefined){
             return true;
         }else{
@@ -78,21 +89,25 @@ function controlExistencia(control){
 }
 
 
-function removerImagen(){
-    const imagen = document.querySelector('#salida');
+function removerContenido(){
+    const imagen = document.querySelector('#imagen-salida');
     imagen.remove();
+    const titulo = document.querySelector('.titulo-salida')
+    titulo.remove();
+    const subtitulo = document.querySelector('.subtitulo-salida')
+    subtitulo.remove();
 }
 
 function crearElemento(){
-    const div = document.querySelector('.segundo');
-    const elemento = document.createElement('textarea')
-    elemento.classList ='textoSalida'
+    const div = document.querySelector('.contenedor-salida');
+    const elemento = document.createElement('textarea');
+    elemento.classList ='textoSalida';
     div.appendChild(elemento);
 }
 
 
 function encriptador(){
-    let mensaje = document.getElementById('intro').value;
+    let mensaje = document.querySelector('#intro').value;
     let nuevo = [];
     for (let index = 0; index < mensaje.length; index++) {
         if (mensaje[index] != 'a' && mensaje[index] != 'e' && mensaje[index] != 'i' && mensaje[index] != 'o' && mensaje[index] != 'u'){
@@ -117,7 +132,6 @@ function encriptador(){
 }
 return nuevo;
 }
-
 
 function desencriptador(){
     let mensaje = document.getElementById('intro').value;

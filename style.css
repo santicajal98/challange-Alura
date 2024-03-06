@@ -49,23 +49,34 @@
         padding-left: 50px; */
         width: 50%;
     }
+    .contenedor-input{
+        display: flex;
+        padding: auto;
+        background-color: white;
+        border-radius: 5%;
+        height:30em;
+        cursor: text;
+    }
+
     #intro{
         position: relative;
-        margin: 0 auto;
+        margin: 1em 1em;
+        font-size: x-large;
+        height: 22em;
         padding: 10px auto;
+        text-align: start;
+        vertical-align: top;
         resize: none;
-        border-radius: 5%;
-        background-color: whitesmoke;
+        border: none;
+        background-color: none;
         opacity: 1;
     }
     #intro::placeholder{
-        text-align: center;
-        padding-top: 50px;
+        text-align: start;
     }
     #intro:active{
-        /* padding-left: 50px; */
-        /* padding-top: 50px; */
-        resize: none;
+        border: none;
+    }
     }
     .segundo{
         display: flex;
@@ -87,14 +98,43 @@
         resize: none;
         border-radius: 3%;
     }
-
-    .textoSalida{
+    .contenedor-salida{
+        display:block;
+        padding: 0 auto;
+        width: 45%;
+        background-color: white;
+        border-radius: 5%;
+    }
+    .contenedor-salida img{
+        margin: 5% auto;
+        padding: 0 auto;
         display: flex;
         justify-content: center;
-        border-radius: 3%;
+        width: 50%;
+        height: 35%;
+    }
+    .contenedor-salida h2{
+        margin: 5% auto;
+        padding: 0 auto;
+        display: flex;
+        justify-content: center;
+    }
+    .contenedor-salida p{
+        margin: 5% auto;
+        padding: 0 auto;
+        display: flex;
+        justify-content: center;
+        text-align: center;
+        font-weight: lighter;
+    }
+    .textoSalida{
+        margin: 2em auto;
+        resize: none;
+        display: flex;
+        justify-content: center;
         background-color: rgb(196, 190, 190);
-        font-size: larger;
-        font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        font-size: medium;
+        font-family:'Franklin Gothic Medium';
     }
 
     .botones{
@@ -199,141 +239,5 @@
         top: 50%;
         transform: translate(-50%,-50%);
     }
-}
 
-
-
-@media  screen and (min-width:480px) {
-    html{
-        min-height: 100%;
-        position: relative;
-    }
-    body{
-        margin-bottom: 50px;
-        display: block;
-        background-color: rgb(102, 102, 102);
-        font-family: 'Franklin Gothic Medium';
-    }
-    body video{
-        position: fixed;
-        margin: 0;
-        padding: 0;
-        width: 100%;
-        opacity: 0.65;
-    }
-    header{
-        position: relative;
-        background-color: #556B51;
-        width: 100%;
-        height: 68px;
-    }
-    h1{
-        position: absolute;
-        color: whitesmoke;
-        font-size: 18px;
-        font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-        font-weight: bold;
-        margin: 0;
-        left: 50%;
-        top: 50%;
-        transform: translate(-50%,-50%);
-    }
-
-    .areaTexto{
-        position: relative;
-        display: flex;
-        flex-direction: row;
-        margin: 0 auto;
-        padding: 30px ;
-    }
-    .primero{
-        display: flex;
-        justify-content: center;
-        width: 50%;
-    }
-    #intro{
-        width: 50%;
-        height: 50em;
-        margin: 0 auto;
-        padding: 10px auto;
-        resize: none;
-        border-radius: 5%;
-        /* background-color: whitesmoke; */
-        /* opacity: 0.75; */
-    }
-    #intro::placeholder{
-        text-align: center;
-        padding-top: 50px;
-    }
-    .segundo{
-        margin: 0 auto;
-        padding: 10px auto;
-        width: 50%;
-        
-    }
-    
-    #salida{
-        display: flex;
-        justify-content: center;
-        border-radius: 3%;
-    }
-
-    
-
-    .botones{
-        display: flex;
-        margin: 0 auto;
-        padding: 0 30px ;
-    }
-
-    .botonesEncriptacion{
-        width: 50%;
-        display: flex;
-        justify-content: center;
-    }
-    .botonCopia{
-        margin: 0;
-        width: 50%;
-        display: flex;
-        justify-content: center;
-    }
-    .encriptarBoton{
-        position: relative;
-        margin-bottom: 15px;
-        background-color: #53EB3C;
-        border: none;
-        border-radius:15px;
-        color: #354138;
-        width: 175px;
-        height: 45px;
-        font-size: 20px;
-        font-weight: lighter;
-        cursor: pointer;
-        margin-left: 50px;
-        margin-right: 50px;
-        transition: 0.5s;
-    }
-    .encriptarBoton:hover{
-        transform: scale(1.05);
-        box-shadow: 0px 0px 0.5px 1.5px white;
-    }
-
-    footer{
-        position:absolute;
-        bottom: 0;
-        background-color:   #556B51;
-        width: 100%;
-        height: 50px;
-    }
-    footer p{
-        position: absolute;
-        color: whitesmoke;
-        font-size: 12px;
-        font-weight: bolder;
-        margin: 0;
-        left: 50%;
-        top: 50%;
-        transform: translate(-50%,-50%);
-    }
-}
 

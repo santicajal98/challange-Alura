@@ -16,10 +16,19 @@
     <main>
         <div class="areaTexto">
             <div class="primero">
-                <input oninput="inputTexto(this.value)" type="text" id="intro" required>
+                <div class="contenedor-input">
+                    <!-- <input oninput="inputTexto(this.value)" type="text" id="intro" required size="35" placeholder="Ingrese su texto aqui"> -->
+                    <textarea placeholder="Ingrese su texto aqui" oninput="inputTexto(this.value)" name="input" id="intro" cols="40" rows="30"></textarea>
+                </div>
+                
             </div>
             <div class="segundo" >
-                <img id="salida" src="/img/1.png" alt="">
+                <!-- <img id="salida" src="img/1.png" alt=""> -->
+                <div class="contenedor-salida">
+                    <img id="imagen-salida" src="img/icono.png" alt="">
+                    <h2 class="titulo-salida">NINGUN MENSAJE ENCONTRADO</h2>
+                    <p class="subtitulo-salida">Ingrese un texto para encriptar o desencriptar</p>
+                </div>
             </div>
         </div>
         <div class="botones">   
