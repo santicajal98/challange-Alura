@@ -498,7 +498,7 @@
     }
 }
 
-@media  (min-width:240px) {
+@media  (min-width:1080px) {
     html{
         min-height: 100%;
         min-width: 100%;
