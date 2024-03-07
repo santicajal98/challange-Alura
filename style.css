@@ -275,6 +275,8 @@
     }
     h1{
         position: absolute;
+        width: 100%;
+        text-align: center;
         color: whitesmoke;
         font-size: 18px;
         font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
