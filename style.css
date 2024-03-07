@@ -25,6 +25,8 @@
     }
     h1{
         position: absolute;
+        width: 100%;
+        text-align: center;
         color: whitesmoke;
         font-size: 0.75em;
         font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
@@ -172,11 +174,11 @@
         background-color: #53EB3C;
         border: none;
         border-radius:15px;
-        color: #354138;
+        color: #c9c9c9;
         width: 175px;
         height: 45px;
         font-size: 20px;
-        font-weight: lighter;
+        font-weight: bolder;
         cursor: pointer;
         margin: 0 50px;
         transition: 0.5s;
@@ -191,11 +193,11 @@
         background-color: #556B51;
         border: none;
         border-radius:10px;
-        color: #354138;
+        color: #c9c9c9;
         width: 175px;
         height: 45px;
         font-size: 20px;
-        font-weight: lighter;
+        font-weight: bolder;
         cursor: pointer;
         margin: 0 50px;
         transition: 0.5s;
@@ -210,11 +212,11 @@
         background-color: #53EB3C;
         border: none;
         border-radius:15px;
-        color: #354138;
+        color: #c9c9c9;
         width: 175px;
         height: 45px;
         font-size: 20px;
-        font-weight: lighter;
+        font-weight: bolder;
         cursor: pointer;
         margin-left: 50px;
         margin-right: 50px;
