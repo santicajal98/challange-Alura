@@ -1,3 +1,252 @@
+
+/* par telefonos */
+@media  (min-width:480px) {
+    html{
+        min-height: 100%;
+        min-width: 100%;
+    }
+    body{
+        display: block;
+        background-color: rgb(102, 102, 102);
+        font-family: 'Franklin Gothic Medium';
+    }
+    body video{
+        position: fixed;
+        margin: 0;
+        padding: 0;
+        opacity: 1;
+    }
+    header{
+        position: absolute;
+        display: block;
+        background-color: #556B51;
+        width: 550px;
+        height: 68px;
+    }
+    h1{
+        position: absolute;
+        color: whitesmoke;
+        font-size: 0.75em;
+        font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        font-weight: bold;
+        margin: 0;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%,-50%);
+    }
+
+    .areaTexto{
+        position:absolute;
+        top: 5em;
+        display: block;
+        flex-direction: row;
+        margin: 0 auto;
+        padding: 0 auto;
+    }
+
+    .primero{
+        display: block;
+        margin: 0 auto;
+        padding: 0 auto;
+        width: 90%;
+    }
+    .contenedor-input{
+        margin: 0 auto;
+        display: flex;
+        justify-content: center;
+        width: 90%;
+        padding: auto;
+        background-color: white;
+        border-radius: 5%;
+        height:40em;
+        cursor: text;
+    }
+
+    #intro{
+        position: relative;
+        margin: 1em 1em;
+        font-size: x-large;
+        height: 30em;
+        width: 90%;
+        padding: 10px auto;
+        text-align: start;
+        vertical-align: top;
+        resize: none;
+        border: none;
+        background-color: none;
+        opacity: 1;
+    }
+    #intro::placeholder{
+        text-align: start;
+    }
+    #intro:active{
+        border: none;
+        border-style: none;
+    }
+    .segundo{
+        display: block;
+        justify-content: center;
+        margin: 0 auto 5em auto;
+        padding: 0 auto;
+        width: 90%;
+    }
+    
+    #salida{
+        position: fixed;
+        background-color: whitesmoke;
+        opacity: 1;
+        display: flex;
+        justify-content: center;
+        margin: 0 auto;
+        padding: 10px auto;
+        resize: none;
+        border-radius: 3%;
+    }
+    .contenedor-salida{
+        display:block;
+        margin: auto;
+        padding: 0 auto;
+        width: 90%;
+        height: 40em;
+        background-color: white;
+        border-radius: 5%;
+    }
+    .contenedor-salida img{
+        position: relative;
+        top: 3%;
+        margin: 0 auto;
+        padding: 5% auto;
+        display: flex;
+        justify-content: center;
+        width: 45%;
+        height: 35%;
+    }
+    .contenedor-salida h2{
+        position: relative;
+        margin: 10% 0 auto;
+        padding: 0 auto;
+        display: flex;
+        justify-content: center;
+    }
+    .contenedor-salida p{
+        margin: 5% auto;
+        padding: 0 auto;
+        display: flex;
+        justify-content: center;
+        text-align: center;
+        font-weight: lighter;
+    }
+    .textoSalida{
+        position: relative;
+        top: 3%;
+        grid-row: 50;
+        margin: 0 auto;
+        padding: 0 auto;
+        width: 90%;
+        height: 37em;
+        border: none;
+        resize: none;
+        display: flex;
+        justify-content: center;
+        background-color: rgb(255, 255, 255);
+        font-size: medium;
+        font-family:'Franklin Gothic Medium';
+    }
+
+    .botones{
+        display: flex;
+        width: 50%;
+        justify-content: space-evenly;
+        margin: 2em auto;
+        padding: 0 auto;
+    }
+
+    .botonesEncriptacion{
+        width: 50%;
+        display: flex;
+        justify-content: center;
+    }
+    
+    .encriptarBoton{
+        position: relative;
+        background-color: #53EB3C;
+        border: none;
+        border-radius:15px;
+        color: #354138;
+        width: 175px;
+        height: 45px;
+        font-size: 20px;
+        font-weight: lighter;
+        cursor: pointer;
+        margin: 0 50px;
+        transition: 0.5s;
+    }
+    .encriptarBoton:hover{
+        transform: scale(1.05);
+        box-shadow: 0px 0px 0.5px 1.5px white;
+    }
+
+    .desencriptarBoton{
+        position: relative;
+        background-color: #556B51;
+        border: none;
+        border-radius:10px;
+        color: #354138;
+        width: 175px;
+        height: 45px;
+        font-size: 20px;
+        font-weight: lighter;
+        cursor: pointer;
+        margin: 0 50px;
+        transition: 0.5s;
+    }
+    .desencriptarBoton:hover{
+        transform: scale(1.05);
+        box-shadow: 0px 0px 0.5px 1.5px white;
+    }
+
+    .botonCopiar{
+        position: relative;
+        background-color: #53EB3C;
+        border: none;
+        border-radius:15px;
+        color: #354138;
+        width: 175px;
+        height: 45px;
+        font-size: 20px;
+        font-weight: lighter;
+        cursor: pointer;
+        margin-left: 50px;
+        margin-right: 50px;
+        transition: 0.5s;
+    }
+    .botonCopiar:hover{
+        transform: scale(1.05);
+        box-shadow: 0px 0px 0.5px 1.5px white;
+    }
+    footer{
+        display: block;
+        position:fixed;
+        bottom: 0;
+        background-color:   #556B51;
+        width: 100%;
+        height: 50px;
+    }
+    footer p{
+        position: absolute;
+        color: whitesmoke;
+        font-size: 12px;
+        font-weight: bolder;
+        margin: 0;
+        text-align: center;
+        width: 100%;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%,-50%);
+    }
+}
+
+
 @media  (min-width:1024px) {
     html{
         min-height: 100%;
@@ -246,503 +495,3 @@
     }
 }
 
-
-
-/* par telefonos */
-@media  (min-width:360px) {
-    html{
-        min-height: 100%;
-        min-width: 100%;
-    }
-    body{
-        display: block;
-        background-color: rgb(102, 102, 102);
-        font-family: 'Franklin Gothic Medium';
-    }
-    body video{
-        position: fixed;
-        margin: 0;
-        padding: 0;
-        opacity: 1;
-    }
-    header{
-        position: fixed;
-        padding: 5px auto;
-        background-color: #556B51;
-        width: 100%;
-        height: 68px;
-    }
-    h1{
-        position: absolute;
-        color: whitesmoke;
-        font-size: 0.75em;
-        font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-        font-weight: bold;
-        margin: 0;
-        left: 50%;
-        top: 50%;
-        transform: translate(-50%,-50%);
-    }
-
-    .areaTexto{
-        position:absolute;
-        top: 5em;
-        display: block;
-        flex-direction: row;
-        margin: 0 auto;
-        padding: 0 auto;
-    }
-
-    .primero{
-        display: block;
-        margin: 0 auto;
-        padding: 0 auto;
-        width: 90%;
-    }
-    .contenedor-input{
-        margin: 0 auto;
-        display: flex;
-        justify-content: center;
-        width: 90%;
-        padding: auto;
-        background-color: white;
-        border-radius: 5%;
-        height:40em;
-        cursor: text;
-    }
-
-    #intro{
-        position: relative;
-        margin: 1em 1em;
-        font-size: x-large;
-        height: 30em;
-        width: 90%;
-        padding: 10px auto;
-        text-align: start;
-        vertical-align: top;
-        resize: none;
-        border: none;
-        background-color: none;
-        opacity: 1;
-    }
-    #intro::placeholder{
-        text-align: start;
-    }
-    #intro:active{
-        border: none;
-        border-style: none;
-    }
-    .segundo{
-        display: block;
-        justify-content: center;
-        margin: 0 auto;
-        padding: 0 auto;
-        width: 90%;
-    }
-    
-    #salida{
-        position: fixed;
-        background-color: whitesmoke;
-        opacity: 1;
-        display: flex;
-        justify-content: center;
-        margin: 0 auto;
-        padding: 10px auto;
-        resize: none;
-        border-radius: 3%;
-    }
-    .contenedor-salida{
-        display:block;
-        margin: auto;
-        padding: 0 auto;
-        width: 90%;
-        height: 40em;
-        background-color: white;
-        border-radius: 5%;
-    }
-    .contenedor-salida img{
-        position: relative;
-        top: 3%;
-        margin: 0 auto;
-        padding: 5% auto;
-        display: flex;
-        justify-content: center;
-        width: 35%;
-        height: 35%;
-    }
-    .contenedor-salida h2{
-        position: relative;
-        margin: 10% 0 auto;
-        padding: 0 auto;
-        display: flex;
-        justify-content: center;
-    }
-    .contenedor-salida p{
-        margin: 5% auto;
-        padding: 0 auto;
-        display: flex;
-        justify-content: center;
-        text-align: center;
-        font-weight: lighter;
-    }
-    .textoSalida{
-        position: relative;
-        top: 3%;
-        grid-row: 50;
-        margin: 0 auto;
-        padding: 0 auto;
-        width: 90%;
-        height: 37em;
-        border: none;
-        resize: none;
-        display: flex;
-        justify-content: center;
-        background-color: rgb(255, 255, 255);
-        font-size: medium;
-        font-family:'Franklin Gothic Medium';
-    }
-
-    .botones{
-        display: flex;
-        width: 50%;
-        justify-content: space-evenly;
-        margin: 2em auto;
-        padding: 0 auto;
-    }
-
-    .botonesEncriptacion{
-        width: 50%;
-        display: flex;
-        justify-content: center;
-    }
-    .botonCopia{
-        margin: 0 auto;
-        width: 50%;
-        display: flex;
-        justify-content: center;
-    }
-    .encriptarBoton{
-        position: relative;
-        background-color: #53EB3C;
-        border: none;
-        border-radius:15px;
-        color: #354138;
-        width: 175px;
-        height: 45px;
-        font-size: 20px;
-        font-weight: lighter;
-        cursor: pointer;
-        margin: 0 50px;
-        transition: 0.5s;
-    }
-    .encriptarBoton:hover{
-        transform: scale(1.05);
-        box-shadow: 0px 0px 0.5px 1.5px white;
-    }
-
-    .desencriptarBoton{
-        position: relative;
-        background-color: #556B51;
-        border: none;
-        border-radius:10px;
-        color: #354138;
-        width: 175px;
-        height: 45px;
-        font-size: 20px;
-        font-weight: lighter;
-        cursor: pointer;
-        margin: 0 50px;
-        transition: 0.5s;
-    }
-    .desencriptarBoton:hover{
-        transform: scale(1.05);
-        box-shadow: 0px 0px 0.5px 1.5px white;
-    }
-
-    .botonCopiar{
-        position: relative;
-        margin-bottom: 15px;
-        background-color: #53EB3C;
-        border: none;
-        border-radius:15px;
-        color: #354138;
-        width: 175px;
-        height: 45px;
-        font-size: 20px;
-        font-weight: lighter;
-        cursor: pointer;
-        margin-left: 50px;
-        margin-right: 50px;
-        transition: 0.5s;
-    }
-    .botonCopiar:hover{
-        transform: scale(1.05);
-        box-shadow: 0px 0px 0.5px 1.5px white;
-    }
-    footer{
-        position:fixed;
-        bottom: 0;
-        background-color:   #556B51;
-        width: 100%;
-        height: 50px;
-    }
-    footer p{
-        position: absolute;
-        color: whitesmoke;
-        font-size: 12px;
-        font-weight: bolder;
-        margin: 0;
-        left: 50%;
-        top: 50%;
-        transform: translate(-50%,-50%);
-    }
-}
-
-@media  (min-width:1080px) {
-    html{
-        min-height: 100%;
-        min-width: 100%;
-    }
-    body{
-        display: block;
-        background-color: rgb(102, 102, 102);
-        font-family: 'Franklin Gothic Medium';
-    }
-    body video{
-        position: fixed;
-        margin: 0;
-        padding: 0;
-        opacity: 1;
-    }
-    header{
-        position: fixed;
-        padding: 5px auto;
-        background-color: #556B51;
-        width: 100%;
-        height: 68px;
-    }
-    h1{
-        position: absolute;
-        color: whitesmoke;
-        font-size: 0.75em;
-        font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-        font-weight: bold;
-        margin: 0;
-        left: 50%;
-        top: 50%;
-        transform: translate(-50%,-50%);
-    }
-
-    .areaTexto{
-        position:absolute;
-        top: 5em;
-        display: block;
-        flex-direction: row;
-        margin: 0 auto;
-        padding: 0 auto;
-    }
-
-    .primero{
-        display: block;
-        margin: 0 auto;
-        padding: 0 auto;
-        width: 90%;
-    }
-    .contenedor-input{
-        margin: 0 auto;
-        display: flex;
-        justify-content: center;
-        width: 90%;
-        padding: auto;
-        background-color: white;
-        border-radius: 5%;
-        height:40em;
-        cursor: text;
-    }
-
-    #intro{
-        position: relative;
-        margin: 1em 1em;
-        font-size: x-large;
-        height: 30em;
-        width: 90%;
-        padding: 10px auto;
-        text-align: start;
-        vertical-align: top;
-        resize: none;
-        border: none;
-        background-color: none;
-        opacity: 1;
-    }
-    #intro::placeholder{
-        text-align: start;
-    }
-    #intro:active{
-        border: none;
-        border-style: none;
-    }
-    .segundo{
-        display: block;
-        justify-content: center;
-        margin: 0 auto;
-        padding: 0 auto;
-        width: 90%;
-    }
-    
-    #salida{
-        position: fixed;
-        background-color: whitesmoke;
-        opacity: 1;
-        display: flex;
-        justify-content: center;
-        margin: 0 auto;
-        padding: 10px auto;
-        resize: none;
-        border-radius: 3%;
-    }
-    .contenedor-salida{
-        display:block;
-        margin: auto;
-        padding: 0 auto;
-        width: 90%;
-        height: 40em;
-        background-color: white;
-        border-radius: 5%;
-    }
-    .contenedor-salida img{
-        position: relative;
-        top: 3%;
-        margin: 0 auto;
-        padding: 5% auto;
-        display: flex;
-        justify-content: center;
-        width: 35%;
-        height: 35%;
-    }
-    .contenedor-salida h2{
-        position: relative;
-        margin: 10% 0 auto;
-        padding: 0 auto;
-        display: flex;
-        justify-content: center;
-    }
-    .contenedor-salida p{
-        margin: 5% auto;
-        padding: 0 auto;
-        display: flex;
-        justify-content: center;
-        text-align: center;
-        font-weight: lighter;
-    }
-    .textoSalida{
-        position: relative;
-        top: 3%;
-        grid-row: 50;
-        margin: 0 auto;
-        padding: 0 auto;
-        width: 90%;
-        height: 37em;
-        border: none;
-        resize: none;
-        display: flex;
-        justify-content: center;
-        background-color: rgb(255, 255, 255);
-        font-size: medium;
-        font-family:'Franklin Gothic Medium';
-    }
-
-    .botones{
-        display: flex;
-        width: 50%;
-        justify-content: space-evenly;
-        margin: 2em auto;
-        padding: 0 auto;
-    }
-
-    .botonesEncriptacion{
-        width: 50%;
-        display: flex;
-        justify-content: center;
-    }
-    .botonCopia{
-        margin: 0 auto;
-        width: 50%;
-        display: flex;
-        justify-content: center;
-    }
-    .encriptarBoton{
-        position: relative;
-        background-color: #53EB3C;
-        border: none;
-        border-radius:15px;
-        color: #354138;
-        width: 175px;
-        height: 45px;
-        font-size: 20px;
-        font-weight: lighter;
-        cursor: pointer;
-        margin: 0 50px;
-        transition: 0.5s;
-    }
-    .encriptarBoton:hover{
-        transform: scale(1.05);
-        box-shadow: 0px 0px 0.5px 1.5px white;
-    }
-
-    .desencriptarBoton{
-        position: relative;
-        background-color: #556B51;
-        border: none;
-        border-radius:10px;
-        color: #354138;
-        width: 175px;
-        height: 45px;
-        font-size: 20px;
-        font-weight: lighter;
-        cursor: pointer;
-        margin: 0 50px;
-        transition: 0.5s;
-    }
-    .desencriptarBoton:hover{
-        transform: scale(1.05);
-        box-shadow: 0px 0px 0.5px 1.5px white;
-    }
-
-    .botonCopiar{
-        position: relative;
-        margin-bottom: 15px;
-        background-color: #53EB3C;
-        border: none;
-        border-radius:15px;
-        color: #354138;
-        width: 175px;
-        height: 45px;
-        font-size: 20px;
-        font-weight: lighter;
-        cursor: pointer;
-        margin-left: 50px;
-        margin-right: 50px;
-        transition: 0.5s;
-    }
-    .botonCopiar:hover{
-        transform: scale(1.05);
-        box-shadow: 0px 0px 0.5px 1.5px white;
-    }
-    footer{
-        position:fixed;
-        bottom: 0;
-        background-color:   #556B51;
-        width: 100%;
-        height: 50px;
-    }
-    footer p{
-        position: absolute;
-        color: whitesmoke;
-        font-size: 12px;
-        font-weight: bolder;
-        margin: 0;
-        left: 50%;
-        top: 50%;
-        transform: translate(-50%,-50%);
-    }
-}
