@@ -2,7 +2,7 @@
 <html lang="es">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" >
     <title>Encriptador de mensajes de Alura</title>
     <link rel="icon" href="/img/icono.png">
     <link rel="stylesheet" href="reset.css">
@@ -13,33 +13,44 @@
     <header>
             <h1>Pagina de Encriptado y Desencriptado de mensajes</h1>
     </header>
-    <main>
+    <main class="principal">
         <div class="areaTexto">
             <div class="primero">
                 <div class="contenedor-input">
                     <!-- <input oninput="inputTexto(this.value)" type="text" id="intro" required size="35" placeholder="Ingrese su texto aqui"> -->
                     <textarea placeholder="Ingrese su texto aqui" oninput="inputTexto(this.value)" name="input" id="intro" cols="40" rows="30"></textarea>
                 </div>
-                
+                <div class="botones">
+                    <div class="botonesEncriptacion">
+                        <div>
+                           <button class="encriptarBoton" onclick="habilitarBoton(1)">Encriptar</button> 
+                        </div>
+                        <div>
+                            <button class="desencriptarBoton" onclick="habilitarBoton(2)" >Desencriptar</button>
+                        </div>
+                    </div>
+                </div>
             </div>
             <div class="segundo" >
-                <!-- <img id="salida" src="img/1.png" alt=""> -->
                 <div class="contenedor-salida">
                     <img id="imagen-salida" src="img/icono.png" alt="">
                     <h2 class="titulo-salida">NINGUN MENSAJE ENCONTRADO</h2>
                     <p class="subtitulo-salida">Ingrese un texto para encriptar o desencriptar</p>
                 </div>
+                <div class="botones">
+                    <button onclick="botonCopiar()" class="botonCopiar">Copiar</button>
+                </div>
             </div>
         </div>
-        <div class="botones">   
+        <!-- <div class="botones">   
             <div class="botonesEncriptacion">
                 <button class="encriptarBoton" onclick="habilitarBoton(1)">Encriptar</button>
                 <button class="desencriptarBoton" onclick="habilitarBoton(2)" >Desencriptar</button>
             </div>
-            <div class="botonCopia" onclick="botonCopiar()">
-                <button class="botonCopiar">Copiar</button>
+            <div class="botonCopia" >
+                <button onclick="botonCopiar()" class="botonCopiar">Copiar</button>
             </div>
-        </div>
+        </div> -->
     </main>
     <footer>
         <p>&copy Copyright Santiago Cajal 2024.Todos los derechos reservados.</p>

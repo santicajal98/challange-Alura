@@ -1,4 +1,4 @@
-@media  screen and (min-width:1024px) {
+@media  (min-width:1024px) {
     html{
         min-height: 100%;
         position: relative;
@@ -43,18 +43,20 @@
     }
 
     .primero{
-        display: flex;
-        justify-content: center;
-        /* margin: 0;
-        padding-left: 50px; */
+        display: block;
+        margin: 0 auto;
+        padding: 0 auto;
         width: 50%;
     }
     .contenedor-input{
+        margin: 0 auto;
         display: flex;
+        justify-content: center;
+        width: 60%;
         padding: auto;
         background-color: white;
         border-radius: 5%;
-        height:30em;
+        height:40em;
         cursor: text;
     }
 
@@ -62,7 +64,8 @@
         position: relative;
         margin: 1em 1em;
         font-size: x-large;
-        height: 22em;
+        height: 30em;
+        width: 90%;
         padding: 10px auto;
         text-align: start;
         vertical-align: top;
@@ -76,14 +79,13 @@
     }
     #intro:active{
         border: none;
-    }
+        border-style: none;
     }
     .segundo{
-        display: flex;
+        display: block;
         justify-content: center;
-        /* margin-left: 15%;
-        padding-left: 50px;
-        padding-right: 50px; */
+        margin: 0 auto;
+        padding: 0 auto;
         width: 50%;
     }
     
@@ -100,21 +102,25 @@
     }
     .contenedor-salida{
         display:block;
+        margin: auto;
         padding: 0 auto;
-        width: 45%;
+        width: 60%;
+        height: 40em;
         background-color: white;
         border-radius: 5%;
     }
     .contenedor-salida img{
-        margin: 5% auto;
-        padding: 0 auto;
+        position: relative;
+        top: 3%;
+        margin: 0 auto;
+        padding: 5% auto;
         display: flex;
         justify-content: center;
-        width: 50%;
+        width: 35%;
         height: 35%;
     }
     .contenedor-salida h2{
-        margin: 5% auto;
+        margin: 10% 0 auto;
         padding: 0 auto;
         display: flex;
         justify-content: center;
@@ -128,10 +134,13 @@
         font-weight: lighter;
     }
     .textoSalida{
+        position: relative;
+        top: 3%;
         grid-row: 50;
-        margin: 1em auto;
+        margin: 0 auto;
         padding: 0 auto;
-        height: 27em;
+        width: 90%;
+        height: 37em;
         border: none;
         resize: none;
         display: flex;
@@ -143,8 +152,10 @@
 
     .botones{
         display: flex;
-        margin: 0 auto;
-        padding: 0 30px ;
+        width: 50%;
+        justify-content: space-evenly;
+        margin: 2em auto;
+        padding: 0 auto;
     }
 
     .botonesEncriptacion{
@@ -153,14 +164,13 @@
         justify-content: center;
     }
     .botonCopia{
-        margin: 0;
+        margin: 0 auto;
         width: 50%;
         display: flex;
         justify-content: center;
     }
     .encriptarBoton{
         position: relative;
-        margin-bottom: 15px;
         background-color: #53EB3C;
         border: none;
         border-radius:15px;
@@ -170,40 +180,31 @@
         font-size: 20px;
         font-weight: lighter;
         cursor: pointer;
-        margin-left: 50px;
-        margin-right: 50px;
+        margin: 0 50px;
         transition: 0.5s;
     }
     .encriptarBoton:hover{
         transform: scale(1.05);
         box-shadow: 0px 0px 0.5px 1.5px white;
     }
-    .encriptarBoton:disabled{
-        background-color:#556B51;
-    }
 
     .desencriptarBoton{
         position: relative;
-        margin-bottom: 15px;
         background-color: #556B51;
         border: none;
-        border-radius:15px;
+        border-radius:10px;
         color: #354138;
         width: 175px;
         height: 45px;
         font-size: 20px;
         font-weight: lighter;
         cursor: pointer;
-        margin-left: 50px;
-        margin-right: 50px;
+        margin: 0 50px;
         transition: 0.5s;
     }
     .desencriptarBoton:hover{
         transform: scale(1.05);
         box-shadow: 0px 0px 0.5px 1.5px white;
-    }
-    .desencriptarBoton:disabled{
-        background-color:#556B51;
     }
 
     .botonCopiar{
@@ -243,250 +244,256 @@
         top: 50%;
         transform: translate(-50%,-50%);
     }
+}
 
 
-@media  screen and (max-width:480px) {
-        html{
-            min-height: 100%;
-            position: relative;
-        }
-        body{
-            display: block;
-            background-color: rgb(102, 102, 102);
-            font-family: 'Franklin Gothic Medium';
-        }
-        body video{
-            display: block;
-            position:fixed;
-            height: 100%;
-            width: 350%;
-            opacity: 1;
-        }
-        header{
-            position: fixed;
-            background-color: #556B51;
-            width: 100%;
-            height: 68px;
-        }
-        h1{
-            position: absolute;
-            color: whitesmoke;
-            font-size: 10px;
-            font-family: 'Franklin Gothic Medium';
-            font-weight: bold;
-            top: 25%;
-            left: 25%;
-            top: 25%;
-        }
+
+/* par telefonos */
+@media  (min-width:360px) {
+    html{
+        min-height: 100%;
+
+    }
+    body{
+        display: block;
+        background-color: rgb(102, 102, 102);
+        font-family: 'Franklin Gothic Medium';
+    }
+    body video{
+        position: fixed;
+        margin: 0;
+        padding: 0;
+        opacity: 1;
+    }
+    header{
+        position: fixed;
+        padding: 5px auto;
+        background-color: #556B51;
+        width: 100%;
+        height: 68px;
+    }
+    h1{
+        position: absolute;
+        color: whitesmoke;
+        font-size: 0.75em;
+        font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        font-weight: bold;
+        margin: 0;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%,-50%);
+    }
+
+    .areaTexto{
+        position:absolute;
+        top: 5em;
+        display: block;
+        flex-direction: row;
+        margin: 0 auto;
+        padding: 0 auto;
+    }
+
+    .primero{
+        display: block;
+        margin: 0 auto;
+        padding: 0 auto;
+        width: 90%;
+    }
+    .contenedor-input{
+        margin: 0 auto;
+        display: flex;
+        justify-content: center;
+        width: 90%;
+        padding: auto;
+        background-color: white;
+        border-radius: 5%;
+        height:40em;
+        cursor: text;
+    }
+
+    #intro{
+        position: relative;
+        margin: 1em 1em;
+        font-size: x-large;
+        height: 30em;
+        width: 90%;
+        padding: 10px auto;
+        text-align: start;
+        vertical-align: top;
+        resize: none;
+        border: none;
+        background-color: none;
+        opacity: 1;
+    }
+    #intro::placeholder{
+        text-align: start;
+    }
+    #intro:active{
+        border: none;
+        border-style: none;
+    }
+    .segundo{
+        display: block;
+        justify-content: center;
+        margin: 0 auto;
+        padding: 0 auto;
+        width: 90%;
+    }
     
-        .areaTexto{
-            position: relative;
-            display:block;
-            margin: 0 auto;
-            padding: 30px ;
-            width: 75%;
-        }
-    
-        .primero{
-            margin: 0 auto;
-            display: flex;
-            justify-content: center;
-            width: 40%;
-        }
-        .contenedor-input{
-            display: block;
-            padding: auto;
-            background-color: white;
-            border-radius: 5%;
-            height:25em;
-            cursor: text;
-        }
-    
-        #intro{
-            position: relative;
-            margin: 1em 1em;
-            font-size: x-large;
-            height: 22em;
-            padding: 10px auto;
-            text-align: start;
-            vertical-align: top;
-            resize: none;
-            border: none;
-            background-color: none;
-            opacity: 1;
-        }
-        #intro::placeholder{
-            text-align: start;
-        }
-        #intro:active{
-            border: none;
-        }
-        }
-        .segundo{
-            display: flex;
-            justify-content: center;
-            /* margin-left: 15%;
-            padding-left: 50px;
-            padding-right: 50px; */
-            width: 50%;
-        }
-        
-        #salida{
-            position: fixed;
-            background-color: whitesmoke;
-            opacity: 1;
-            display: flex;
-            justify-content: center;
-            margin: 0 auto;
-            padding: 10px auto;
-            resize: none;
-            border-radius: 3%;
-        }
-        .contenedor-salida{
-            display:block;
-            padding: 0 auto;
-            width: 45%;
-            background-color: white;
-            border-radius: 5%;
-        }
-        .contenedor-salida img{
-            margin: 5% auto;
-            padding: 0 auto;
-            display: flex;
-            justify-content: center;
-            width: 50%;
-            height: 35%;
-        }
-        .contenedor-salida h2{
-            margin: 5% auto;
-            padding: 0 auto;
-            display: flex;
-            justify-content: center;
-        }
-        .contenedor-salida p{
-            margin: 5% auto;
-            padding: 0 auto;
-            display: flex;
-            justify-content: center;
-            text-align: center;
-            font-weight: lighter;
-        }
-        .textoSalida{
-            grid-row: 50;
-            margin: 1em auto;
-            padding: 0 auto;
-            height: 27em;
-            border: none;
-            resize: none;
-            display: flex;
-            justify-content: center;
-            background-color: rgb(255, 255, 255);
-            font-size: medium;
-            font-family:'Franklin Gothic Medium';
-        }
-    
-        .botones{
-            display: flex;
-            margin: 0 auto;
-            padding: 0 30px ;
-        }
-    
-        .botonesEncriptacion{
-            width: 50%;
-            display: flex;
-            justify-content: center;
-        }
-        .botonCopia{
-            margin: 0;
-            width: 50%;
-            display: flex;
-            justify-content: center;
-        }
-        .encriptarBoton{
-            position: relative;
-            margin-bottom: 15px;
-            background-color: #53EB3C;
-            border: none;
-            border-radius:15px;
-            color: #354138;
-            width: 175px;
-            height: 45px;
-            font-size: 20px;
-            font-weight: lighter;
-            cursor: pointer;
-            margin-left: 50px;
-            margin-right: 50px;
-            transition: 0.5s;
-        }
-        .encriptarBoton:hover{
-            transform: scale(1.05);
-            box-shadow: 0px 0px 0.5px 1.5px white;
-        }
-        .encriptarBoton:disabled{
-            background-color:#556B51;
-        }
-    
-        .desencriptarBoton{
-            position: relative;
-            margin-bottom: 15px;
-            background-color: #556B51;
-            border: none;
-            border-radius:15px;
-            color: #354138;
-            width: 175px;
-            height: 45px;
-            font-size: 20px;
-            font-weight: lighter;
-            cursor: pointer;
-            margin-left: 50px;
-            margin-right: 50px;
-            transition: 0.5s;
-        }
-        .desencriptarBoton:hover{
-            transform: scale(1.05);
-            box-shadow: 0px 0px 0.5px 1.5px white;
-        }
-        .desencriptarBoton:disabled{
-            background-color:#556B51;
-        }
-    
-        .botonCopiar{
-            position: relative;
-            margin-bottom: 15px;
-            background-color: #53EB3C;
-            border: none;
-            border-radius:15px;
-            color: #354138;
-            width: 175px;
-            height: 45px;
-            font-size: 20px;
-            font-weight: lighter;
-            cursor: pointer;
-            margin-left: 50px;
-            margin-right: 50px;
-            transition: 0.5s;
-        }
-        .botonCopiar:hover{
-            transform: scale(1.05);
-            box-shadow: 0px 0px 0.5px 1.5px white;
-        }
-        footer{
-            position:fixed;
-            bottom: 0;
-            background-color:   #556B51;
-            width: 100%;
-            height: 60px;
-        }
-        footer p{
-            position: absolute;
-            color: whitesmoke;
-            font-size: 12px;
-            font-weight: bolder;
-            margin: 0;
-            left: 50%;
-            top: 50%;
-            transform: translate(-50%,-50%);
-        }
-    
-    
-    
+    #salida{
+        position: fixed;
+        background-color: whitesmoke;
+        opacity: 1;
+        display: flex;
+        justify-content: center;
+        margin: 0 auto;
+        padding: 10px auto;
+        resize: none;
+        border-radius: 3%;
+    }
+    .contenedor-salida{
+        display:block;
+        margin: auto;
+        padding: 0 auto;
+        width: 90%;
+        height: 40em;
+        background-color: white;
+        border-radius: 5%;
+    }
+    .contenedor-salida img{
+        position: relative;
+        top: 3%;
+        margin: 0 auto;
+        padding: 5% auto;
+        display: flex;
+        justify-content: center;
+        width: 35%;
+        height: 35%;
+    }
+    .contenedor-salida h2{
+        position: relative;
+        margin: 10% 0 auto;
+        padding: 0 auto;
+        display: flex;
+        justify-content: center;
+    }
+    .contenedor-salida p{
+        margin: 5% auto;
+        padding: 0 auto;
+        display: flex;
+        justify-content: center;
+        text-align: center;
+        font-weight: lighter;
+    }
+    .textoSalida{
+        position: relative;
+        top: 3%;
+        grid-row: 50;
+        margin: 0 auto;
+        padding: 0 auto;
+        width: 90%;
+        height: 37em;
+        border: none;
+        resize: none;
+        display: flex;
+        justify-content: center;
+        background-color: rgb(255, 255, 255);
+        font-size: medium;
+        font-family:'Franklin Gothic Medium';
+    }
+
+    .botones{
+        display: flex;
+        width: 50%;
+        justify-content: space-evenly;
+        margin: 2em auto;
+        padding: 0 auto;
+    }
+
+    .botonesEncriptacion{
+        width: 50%;
+        display: flex;
+        justify-content: center;
+    }
+    .botonCopia{
+        margin: 0 auto;
+        width: 50%;
+        display: flex;
+        justify-content: center;
+    }
+    .encriptarBoton{
+        position: relative;
+        background-color: #53EB3C;
+        border: none;
+        border-radius:15px;
+        color: #354138;
+        width: 175px;
+        height: 45px;
+        font-size: 20px;
+        font-weight: lighter;
+        cursor: pointer;
+        margin: 0 50px;
+        transition: 0.5s;
+    }
+    .encriptarBoton:hover{
+        transform: scale(1.05);
+        box-shadow: 0px 0px 0.5px 1.5px white;
+    }
+
+    .desencriptarBoton{
+        position: relative;
+        background-color: #556B51;
+        border: none;
+        border-radius:10px;
+        color: #354138;
+        width: 175px;
+        height: 45px;
+        font-size: 20px;
+        font-weight: lighter;
+        cursor: pointer;
+        margin: 0 50px;
+        transition: 0.5s;
+    }
+    .desencriptarBoton:hover{
+        transform: scale(1.05);
+        box-shadow: 0px 0px 0.5px 1.5px white;
+    }
+
+    .botonCopiar{
+        position: relative;
+        margin-bottom: 15px;
+        background-color: #53EB3C;
+        border: none;
+        border-radius:15px;
+        color: #354138;
+        width: 175px;
+        height: 45px;
+        font-size: 20px;
+        font-weight: lighter;
+        cursor: pointer;
+        margin-left: 50px;
+        margin-right: 50px;
+        transition: 0.5s;
+    }
+    .botonCopiar:hover{
+        transform: scale(1.05);
+        box-shadow: 0px 0px 0.5px 1.5px white;
+    }
+    footer{
+        position:fixed;
+        bottom: 0;
+        background-color:   #556B51;
+        width: 100%;
+        height: 50px;
+    }
+    footer p{
+        position: absolute;
+        color: whitesmoke;
+        font-size: 12px;
+        font-weight: bolder;
+        margin: 0;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%,-50%);
+    }
+}
