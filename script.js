@@ -3,29 +3,42 @@ var condicionEncriptador = 1;
 
 //funcion que responde a la interaccion con los botontes de encriptador y desencriptado
 function habilitarBoton(value){
-    const botonEncriptar = document.querySelector('.encriptarBoton');
-    const botonDesencriptar = document.querySelector('.desencriptarBoton');
+    const botonEncriptar = document.querySelector('.encriptar-boton');
+    const botonDesencriptar = document.querySelector('.desencriptar-boton');
     if (value  == 1) {
         botonEncriptar.style.backgroundColor = '#53EB3C';
+        botonEncriptar.style.color = '#000000'
         botonDesencriptar.style.backgroundColor = '#556B51';
+        botonDesencriptar.style.color = '#FFFFFF'
         condicionEncriptador = 1;
-        var textoInput = document.querySelector('#intro').value;
+        var textoInput = document.querySelector('#texto-introducido').value;
         if(textoInput != ""){
         var traduccion = encriptador(textoInput);
-        document.querySelector('.textoSalida').value= traduccion;
+        document.querySelector('.texto-convertido').value= traduccion;
         }
     }
     if (value == 2) {
         botonEncriptar.style.backgroundColor = '#556B51';
+        botonEncriptar.style.color = '#FFFFFF'
         botonDesencriptar.style.backgroundColor = '#53EB3C';
+        botonDesencriptar.style.color = '#000000'
         condicionEncriptador = 2;
-        var textoInput = document.querySelector('#intro').value;
+        var textoInput = document.querySelector('#texto-introducido').value;
         if(textoInput != ""){
         var traduccion = desencriptador(textoInput);
-        document.querySelector('.textoSalida').value= traduccion;
+        document.querySelector('.texto-convertido').value= traduccion;
         }
     }
 }
+//
+//areaTexto
+//primero
+//intro
+//segundo
+//salida
+//textoSalida
+//botoneesencriptacion
+//encriptarBoton
 
 //funcion que interactua con el ingreso de texto en el input, si no hay texto dentro no realiza el encriptado o desencriptado
 function inputTexto(textoIngresado){
@@ -45,7 +58,7 @@ function inputTexto(textoIngresado){
         subtitulo.textContent = 'Ingrese un texto para encriptar o desencriptar';
         div.appendChild(subtitulo);
         while(controlExistencia(2) == false){
-            const elementoTranscripto = document.querySelector('.textoSalida');
+            const elementoTranscripto = document.querySelector('.texto-convertido');
             elementoTranscripto.remove();
         }
     }else{
@@ -56,13 +69,13 @@ function inputTexto(textoIngresado){
         }
     }
     //esta seccion indica que si el input tiene texto se lo encripte o desencripte
-    if (document.querySelector('#intro').value != "" && condicionEncriptador == 1){
+    if (document.querySelector('#texto-introducido').value != "" && condicionEncriptador == 1){
         var traduccion = encriptador(textoIngresado);
-        document.querySelector('.textoSalida').value = traduccion;
+        document.querySelector('.texto-convertido').value = traduccion;
     }
-    if (document.querySelector('#intro').value != "" && condicionEncriptador == 2){
+    if (document.querySelector('#texto-introducido').value != "" && condicionEncriptador == 2){
         var traduccion = desencriptador(textoIngresado);
-        document.querySelector('.textoSalida').value = traduccion;
+        document.querySelector('.texto-convertido').value = traduccion;
     }
 }
 //funcion para controlar la existencia de un elemento de html
@@ -76,7 +89,7 @@ function controlExistencia(control){
         }
     }
     if (control == 2){
-        let texto = document.querySelector('.textoSalida')
+        let texto = document.querySelector('.texto-convertido')
             if(texto == undefined){
                 return true;
             }else{
@@ -98,7 +111,7 @@ function removerContenido(){
 function crearElemento(){
     const div = document.querySelector('.contenedor-salida');
     const elemento = document.createElement('textarea');
-    elemento.classList ='textoSalida';
+    elemento.classList ='texto-convertido';
     elemento.rows = "40";
     elemento.cols = "30";
     div.appendChild(elemento);
@@ -106,7 +119,7 @@ function crearElemento(){
 
 
 function encriptador(){
-    let mensaje = document.querySelector('#intro').value;
+    let mensaje = document.querySelector('#texto-introducido').value;
     let nuevo = [];
     for (let index = 0; index < mensaje.length; index++) {
         if (mensaje[index] != 'a' && mensaje[index] != 'e' && mensaje[index] != 'i' && mensaje[index] != 'o' && mensaje[index] != 'u'){
@@ -133,7 +146,7 @@ return nuevo;
 }
 
 function desencriptador(){
-    let mensaje = document.getElementById('intro').value;
+    let mensaje = document.getElementById('texto-introducido').value;
     let nuevo = [];
     let letra = [];
     let indiceNuevo = 0;
@@ -172,7 +185,7 @@ function desencriptador(){
         return nuevo;
 } 
 function botonCopiar(){
-        let copiar = document.querySelector('.textoSalida').value;
+        let copiar = document.querySelector('.texto-convertido').value;
         navigator.clipboard.writeText(copiar);
     }
     
