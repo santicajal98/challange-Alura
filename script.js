@@ -3,69 +3,63 @@ var condicionEncriptador = 1;
 
 //funcion que responde a la interaccion con los botontes de encriptador y desencriptado
 function habilitarBoton(value){
-    const botonEncriptar = document.querySelector('.encriptar-boton');
-    const botonDesencriptar = document.querySelector('.desencriptar-boton');
+    const botonEncriptar = document.querySelector('.encriptar-boton'); //variable que toma las propiedades del boton de encriptar
+    const botonDesencriptar = document.querySelector('.desencriptar-boton'); //variable que toma las propiedades del boton de desencriptar
+    //condiciones de encriptado que definen la apariencia de los botones
     if (value  == 1) {
+        //apariencia de los botones
         botonEncriptar.style.backgroundColor = '#53EB3C';
         botonEncriptar.style.color = '#000000'
         botonDesencriptar.style.backgroundColor = '#556B51';
         botonDesencriptar.style.color = '#FFFFFF'
-        condicionEncriptador = 1;
-        var textoInput = document.querySelector('#texto-introducido').value;
-        if(textoInput != ""){
-        var traduccion = encriptador(textoInput);
-        document.querySelector('.texto-convertido').value= traduccion;
+        condicionEncriptador = 1; // se establece la condicion de encriptado
+        var textoInput = document.querySelector('#texto-introducido').value;//variable que toma el valor del texto ingresado
+        if(textoInput != ""){ //condicion para el encriptado que establece que el campo de ingreso no puede estar vacio
+        var traduccion = encriptador(textoInput);//funcion que encripta el texto ingresado y lo asigna a una variable
+        document.querySelector('.texto-convertido').value= traduccion;//asignacion del texto convertido al textarea de salida
         }
     }
     if (value == 2) {
+        //apariencia de los botones
         botonEncriptar.style.backgroundColor = '#556B51';
         botonEncriptar.style.color = '#FFFFFF'
         botonDesencriptar.style.backgroundColor = '#53EB3C';
         botonDesencriptar.style.color = '#000000'
-        condicionEncriptador = 2;
-        var textoInput = document.querySelector('#texto-introducido').value;
-        if(textoInput != ""){
-        var traduccion = desencriptador(textoInput);
-        document.querySelector('.texto-convertido').value= traduccion;
+        condicionEncriptador = 2;// se establece la condicion de encriptado
+        var textoInput = document.querySelector('#texto-introducido').value;//variable que toma el valor del texto ingresado
+        if(textoInput != ""){ //condicion para el encriptado que establece que el campo de ingreso no puede estar vacio
+        var traduccion = desencriptador(textoInput);//funcion que deseencripta el texto ingresado y lo asigna a una variable
+        document.querySelector('.texto-convertido').value= traduccion;//asignacion del texto convertido al textarea de salida
         }
     }
 }
-//
-//areaTexto
-//primero
-//intro
-//segundo
-//salida
-//textoSalida
-//botoneesencriptacion
-//encriptarBoton
 
 //funcion que interactua con el ingreso de texto en el input, si no hay texto dentro no realiza el encriptado o desencriptado
 function inputTexto(textoIngresado){
-    //el siguiente if controla si el input tiene texto o no, en caso de no tener en la ventana de transcripcion pone una imagen que indica que no hay texto
-    if (textoIngresado === ""){  
-        const div = document.querySelector('.contenedor-salida');
-        const imagen = document.createElement('img');
-        imagen.src = 'img/icono.png';
-        imagen.id = "imagen-salida";
-        div.appendChild(imagen);
-        const titulo = document.createElement('h2')
-        titulo.textContent = 'NINGUN MENSAJE ENCONTRADO';
-        titulo.classList = 'titulo-salida';
-        div.appendChild(titulo);
-        const subtitulo = document.createElement('p')
-        subtitulo.classList = 'subtitulo-salida';
-        subtitulo.textContent = 'Ingrese un texto para encriptar o desencriptar';
-        div.appendChild(subtitulo);
-        while(controlExistencia(2) == false){
-            const elementoTranscripto = document.querySelector('.texto-convertido');
-            elementoTranscripto.remove();
+    //el siguiente if controla si el input tiene texto o no, en caso de no tener en la ventana de transcripcion pone una imagen y un mensaje que indica que no hay texto
+    if (textoIngresado === ""){  //se hace el control de que en la seccion de ingreso no haya ningun texto
+        const div = document.querySelector('.contenedor-salida'); //se asigna a la variable div el elemento con la clase "contenedor-salida"
+        const imagen = document.createElement('img');//se crea un elemento HTML de tipo imagen
+        imagen.src = 'img/lupa.png'; //se le asigna una src al elemento imagen
+        imagen.id = "imagen-salida"; //se le agrega un id al elemento imagen
+        div.appendChild(imagen); // se coloca el elemento imagen como hijo del elemento div
+        const titulo = document.createElement('h2') //se crea un elemento de tipo h2 de HTML y se lo asgina a la variable titulo
+        titulo.textContent = 'NINGUN MENSAJE ENCONTRADO'; //se le asigna un texto de contenido a la variable titulo
+        titulo.classList = 'titulo-salida'; //se le asigna una clase a la variable titulo
+        div.appendChild(titulo); //se coloca el elemento titulo como hijo del elemento div
+        const subtitulo = document.createElement('p') //se crea un elemento p y se lo asgina a la variable subtitulo
+        subtitulo.classList = 'subtitulo-salida'; //se le asigna una clase a la variable subtitulo
+        subtitulo.textContent = 'Ingrese un texto para encriptar o desencriptar'; //se le agrega un texto de contenido a la variable subtitulo
+        div.appendChild(subtitulo);//se coloca como hijo del div a la variable subtitulo
+        while(controlExistencia(2) == false){ //se hace un control de que la imagen exista o no previamente
+            const elementoTranscripto = document.querySelector('.texto-convertido'); //se le asigna a la variable elementoTranscripto el elemento de clase texto-convertido
+            elementoTranscripto.remove();//se remueve el elemento mencionado anteriormente
         }
     }else{
         //controlo que la imagen exista antes de eliminarla y crear el elemento que la va a reemplazar
         if(controlExistencia(1) == false){
-            removerContenido();
-            crearElemento();
+            removerContenido(); //remuevo la imagen y el texto contenido
+            crearElemento();//creo el nuevo elemento que va a contener el texto transcripto
         }
     }
     //esta seccion indica que si el input tiene texto se lo encripte o desencripte
@@ -98,7 +92,7 @@ function controlExistencia(control){
     }
 }
 
-
+//funcion para remover el contenido del div de salida, remueve la imagen y los textos
 function removerContenido(){
     const imagen = document.querySelector('#imagen-salida');
     imagen.remove();
@@ -107,7 +101,7 @@ function removerContenido(){
     const subtitulo = document.querySelector('.subtitulo-salida')
     subtitulo.remove();
 }
-
+//funcion que crea el elemento de tipo textarea que va a contener el mensaje encriptado o desencriptado
 function crearElemento(){
     const div = document.querySelector('.contenedor-salida');
     const elemento = document.createElement('textarea');
@@ -116,8 +110,7 @@ function crearElemento(){
     elemento.cols = "30";
     div.appendChild(elemento);
 }
-
-
+//funcion que encripta el mensaje ingresado y lo devuelve a una variable
 function encriptador(){
     let mensaje = document.querySelector('#texto-introducido').value;
     let nuevo = [];
@@ -144,7 +137,7 @@ function encriptador(){
 }
 return nuevo;
 }
-
+//funcion que desencripta el mensaje ingresado y lo devuelve a una variable
 function desencriptador(){
     let mensaje = document.getElementById('texto-introducido').value;
     let nuevo = [];
@@ -183,7 +176,8 @@ function desencriptador(){
             }
         }
         return nuevo;
-} 
+}
+//funcion que define el comportamiento del boton copiar
 function botonCopiar(){
         let copiar = document.querySelector('.texto-convertido').value;
         navigator.clipboard.writeText(copiar);

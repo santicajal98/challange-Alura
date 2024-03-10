@@ -1,15 +1,17 @@
-
-/* par telefonos */
+/* media query para telefonos*/
 @media  (min-width:360px) {
+    /*propiedad para que todo el html como minimo ocupe el 100% de toda la pantalla tanto en alto como en ancho*/
     html{
         min-height: 100%;
         min-width: 100%;
     }
+    /*propiedad para definir los atributos del body*/
     body{
         display: block;
         background-color: rgb(102, 102, 102);
         font-family: 'Franklin Gothic Medium';
     }
+    /*propiedad para definir los atributos del video de fondo*/
     .video{
         position: fixed;
         height: 110%;
@@ -17,6 +19,7 @@
         padding: 0;
         opacity: 1;
     }
+    /*propiedad para definir los atributos del header*/
     header{
         display: block;
         position: absolute;
@@ -24,6 +27,7 @@
         width: 100%;
         height: 68px;
     }
+    /*Propiedad para definir los atributos del titulo central de la pagina*/
     h1{
         position: absolute;
         width: 100%;
@@ -37,8 +41,8 @@
         top: 50%;
         transform: translate(-50%,-50%);
     }
-
-    .texto-ingreso{
+    /*propiedad para el area principal donde se encuentran el ingreso y la salida de texto*/
+    .area-texto{
         width: 100%;
         position:absolute;
         top: 5em;
@@ -47,13 +51,14 @@
         margin: 0 auto;
         padding: 0 auto;
     }
-
+    /*propiedad para definir a la seccion donde se hace el ingreso de texto y estan los botones que indican el funcionamiento*/
     .primera-seccion{
         display: block;
         margin: 0 auto;
         padding: 0 auto;
         width: 90%;
     }
+    /*propiedad para definir al div que contiene al textarea donde se hace el ingreso del mensaje para ser encriptado o desencriptado*/
     .contenedor-input{
         margin: 0 auto;
         display: flex;
@@ -65,7 +70,7 @@
         height:40em;
         cursor: text;
     }
-
+    /*propiedad para definir las dimensiones del text area donde se ingresa el mensaje*/
     #texto-introducido{
         position: relative;
         margin: 1em 1em;
@@ -80,10 +85,17 @@
         background-color: none;
         opacity: 1;
     }
+    /*propiedad para definir la posicion del placeholder*/
     #texto-introducido::placeholder{
         text-align: start;
     }
-
+    /*propiedad para el texto que advierte que solo se aceptan minusculas*/
+    .advertencia-input{
+        color: #ffffff;
+        text-align: center;
+        padding-top: 1%;
+    }
+    /*propiedad que define el comportamiento de la segunda seccion donde se muestra el texto ya transcripto*/
     .segunda-seccion{
         display: block;
         justify-content: center;
@@ -91,7 +103,7 @@
         padding: 0 auto;
         width: 90%;
     }
-    
+    /*propiedad para definir los atributos del text area del texto ya encriptado o desencriptado*/
     #texto-salida{
         position: fixed;
         background-color: whitesmoke;
@@ -103,6 +115,7 @@
         resize: none;
         border-radius: 3%;
     }
+    /*propiedad que define el comportamiendo del contenedor del text area de salida*/
     .contenedor-salida{
         display:block;
         margin: auto;
@@ -112,6 +125,7 @@
         background-color: white;
         border-radius: 5%;
     }
+    /*propiedad que define el comportamiendo de la imagen del contenedor de salida*/
     .contenedor-salida img{
         position: relative;
         top: 3%;
@@ -122,6 +136,7 @@
         width: 45%;
         height: 35%;
     }
+    /*propiedad que define el comportamiento del titulo en el contenedor de salida*/
     .contenedor-salida h2{
         position: relative;
         margin: 10% 0 auto;
@@ -129,6 +144,7 @@
         display: flex;
         justify-content: center;
     }
+    /*propiedad que define el comportamiento del mensaje en el contenedor de salida*/
     .contenedor-salida p{
         margin: 5% auto;
         padding: 0 auto;
@@ -137,6 +153,7 @@
         text-align: center;
         font-weight: lighter;
     }
+    /*propiedad que define el comportamiento del texto transcripto*/
     .texto-convertido{
         position: relative;
         top: 3%;
@@ -153,7 +170,7 @@
         font-size: medium;
         font-family:'Franklin Gothic Medium';
     }
-
+    /*propiedad que define el comportamiento de posicion de los botones*/
     .botones{
         display: flex;
         width: 100%;
@@ -162,14 +179,13 @@
         margin: 1em auto 2em auto;
         padding: 0 auto;
     }
-
-    
+    /*propiedad que define el comportamiento de los botones de encriptar y desencriptar*/
     .botones-encriptacion{
         display: flex;
         justify-content:center;
         gap:60%;
     }
-    
+    /*propiedad que define la apariencia del boton de encriptar*/
     .encriptar-boton{
         position: relative;
         background-color: #53EB3C;
@@ -185,11 +201,12 @@
         left: 50%;
         transition: 0.5s;
     }
+    /*propiedad que define el comportamiento del boton cuando el puntero del mouse se posiciona sobre este*/
     .encriptar-boton:hover{
         transform: scale(1.05);
         box-shadow: 0px 0px 0.5px 1.5px white;
     }
-
+    /*propiedad que define la apariencia del boton de desencriptar*/
     .desencriptar-boton{
         position: relative;
         background-color: #556B51;
@@ -205,29 +222,33 @@
         right: 50%;
         transition: 0.5s;
     }
+    /*propiedad que define el comportamiento del boton de desencriptar cuando el puntero del mouse se posiciona sobre este*/
     .desencriptar-boton:hover{
         transform: scale(1.05);
         box-shadow: 0px 0px 0.5px 1.5px white;
     }
-
+    /*propiedad que define la apariencia del boton copiar*/
     .boton-copiar{
         position: relative;
         background-color: #53EB3C;
         border: none;
         border-radius:1em;
-        color: #ffffff;
+        color: #000000;
         width: 7em;
         height: 3em;
         font-size: 90%;
         font-weight: bold;
+        margin-top: 3%;
         cursor: pointer;
         justify-content: center;
         transition: 0.5s;
     }
+    /*propiedad que define el comportamiento del boton de copiar cuando el puntero del mouse se posiciona sobre este*/
     .botonCopiar:hover{
         transform: scale(1.05);
         box-shadow: 0px 0px 0.5px 1.5px white;
     }
+    /*propiedad que define la apariencia y comportamiento del footer de la pagina*/
     footer{
         display: block;
         position:fixed;
@@ -236,6 +257,7 @@
         width: 100%;
         height: 50px;
     }
+    /*propiedad que define la apariencia y comportamiento del texto contenido en el footer*/
     footer p{
         position: absolute;
         color: whitesmoke;
@@ -250,16 +272,20 @@
     }
 }
 
+/* media query para tablets */
 @media  (min-width:768px) {
+    /*propiedad para que todo el html como minimo ocupe el 100% de toda la pantalla tanto en alto como en ancho*/
     html{
         min-height: 100%;
         min-width: 100%;
     }
+    /*propiedad para definir los atributos del body*/
     body{
         display: block;
         background-color: rgb(102, 102, 102);
         font-family: 'Franklin Gothic Medium';
     }
+    /*propiedad para definir los atributos del video de fondo*/
     .video{
         position: fixed;
         height: 110%;
@@ -267,6 +293,7 @@
         padding: 0;
         opacity: 1;
     }
+    /*propiedad para definir los atributos del header*/
     header{
         position: absolute;
         display: block;
@@ -274,6 +301,7 @@
         width: 100%;
         height: 68px;
     }
+    /*Propiedad para definir los atributos del titulo central de la pagina*/
     h1{
         position: absolute;
         width: 100%;
@@ -287,8 +315,8 @@
         top: 50%;
         transform: translate(-50%,-50%);
     }
-
-    .texto-ingreso{
+    /*propiedad para el area principal donde se encuentran el ingreso y la salida de texto*/
+    .area-texto{
         width: 100%;
         position:absolute;
         top: 5em;
@@ -297,13 +325,14 @@
         margin: 0 auto;
         padding: 0 auto;
     }
-
+    /*propiedad para definir a la seccion donde se hace el ingreso de texto y estan los botones que indican el funcionamiento*/
     .primera-seccion{
         display: block;
         margin: 0 auto;
         padding: 0 auto;
         width: 70%;
     }
+    /*propiedad para definir al div que contiene al textarea donde se hace el ingreso del mensaje para ser encriptado o desencriptado*/
     .contenedor-input{
         margin: 0 auto;
         display: flex;
@@ -315,7 +344,7 @@
         height:30em;
         cursor: text;
     }
-
+    /*propiedad para definir las dimensiones del text area donde se ingresa el mensaje*/
     #texto-introducido{
         position: relative;
         margin: 1em 1em;
@@ -330,10 +359,17 @@
         background-color: none;
         opacity: 1;
     }
+    /*propiedad para definir la posicion del placeholder*/
     #texto-introducido::placeholder{
         text-align: start;
     }
-
+    /*propiedad para el texto que advierte que solo se aceptan minusculas*/
+    .advertencia-input{
+        color: #ffffff;
+        text-align: center;
+        padding-top: 1%;
+    }
+    /*propiedad que define el comportamiento de la segunda seccion donde se muestra el texto ya transcripto*/
     .segunda-seccion{
         display: block;
         justify-content: center;
@@ -341,7 +377,7 @@
         padding: 0 auto;
         width: 90%;
     }
-    
+    /*propiedad para definir los atributos del text area del texto ya encriptado o desencriptado*/
     #texto-salida{
         position: fixed;
         background-color: whitesmoke;
@@ -353,6 +389,7 @@
         resize: none;
         border-radius: 3%;
     }
+    /*propiedad que define el comportamiendo del contenedor del text area de salida*/
     .contenedor-salida{
         display:block;
         margin: auto;
@@ -362,6 +399,7 @@
         background-color: white;
         border-radius: 5%;
     }
+    /*propiedad que define el comportamiendo de la imagen del contenedor de salida*/
     .contenedor-salida img{
         position: relative;
         top: 10%;
@@ -372,6 +410,7 @@
         width: 25%;
         height: 25%;
     }
+    /*propiedad que define el comportamiento del titulo en el contenedor de salida*/
     .contenedor-salida h2{
         position: relative;
         margin: 10% 0 auto;
@@ -379,6 +418,7 @@
         display: flex;
         justify-content: center;
     }
+    /*propiedad que define el comportamiento del mensaje en el contenedor de salida*/
     .contenedor-salida p{
         margin: 5% auto;
         padding: 0 auto;
@@ -387,6 +427,7 @@
         text-align: center;
         font-weight: lighter;
     }
+    /*propiedad que define el comportamiento del texto transcripto*/
     .texto-convertido{
         position: relative;
         top: 3%;
@@ -403,7 +444,7 @@
         font-size: medium;
         font-family:'Franklin Gothic Medium';
     }
-
+    /*propiedad que define el comportamiento de posicion de los botones*/
     .botones{
         display: flex;
         width: 100%;
@@ -412,13 +453,13 @@
         margin: 1em auto 2em auto;
         padding: 0 auto;
     }
-
+    /*propiedad que define el comportamiento de los botones de encriptar y desencriptar*/
     .botones-encriptacion{
         display: flex;
         justify-content: center;
         gap: 60%;
     }
-    
+    /*propiedad que define la apariencia del boton de encriptar*/
     .encriptar-boton{
         position: relative;
         background-color: #53EB3C;
@@ -434,11 +475,12 @@
         left: 50%;
         transition: 0.5s;
     }
+    /*propiedad que define el comportamiento del boton cuando el puntero del mouse se posiciona sobre este*/
     .encriptar-boton:hover{
         transform: scale(1.05);
         box-shadow: 0px 0px 0.5px 1.5px white;
     }
-
+    /*propiedad que define la apariencia del boton de desencriptar*/
     .desencriptar-boton{
         position: relative;
         background-color: #556B51;
@@ -454,29 +496,33 @@
         right: 50%;
         transition: 0.5s;
     }
+    /*propiedad que define el comportamiento del boton de desencriptar cuando el puntero del mouse se posiciona sobre este*/
     .desencriptar-boton:hover{
         transform: scale(1.05);
         box-shadow: 0px 0px 0.5px 1.5px white;
     }
-
+    /*propiedad que define la apariencia del boton copiar*/
     .boton-copiar{
         position: relative;
         background-color: #53EB3C;
         border: none;
         border-radius:15px;
-        color: #ffffff;
+        color: #000000;
         width: 10em;
         height: 3em;
         font-size: 90%;
         font-weight: bold;
+        margin-top: 3%;
         cursor: pointer;
         justify-content: center;
         transition: 0.5s;
     }
+    /*propiedad que define el comportamiento del boton de copiar cuando el puntero del mouse se posiciona sobre este*/
     .botonCopiar:hover{
         transform: scale(1.05);
         box-shadow: 0px 0px 0.5px 1.5px white;
     }
+    /*propiedad que define la apariencia y comportamiento del footer de la pagina*/
     footer{
         display: block;
         position:fixed;
@@ -485,6 +531,7 @@
         width: 100%;
         height: 60px;
     }
+    /*propiedad que define la apariencia y comportamiento del texto contenido en el footer*/
     footer p{
         position: absolute;
         color: whitesmoke;
@@ -499,16 +546,20 @@
     }
 }
 
+/* media query para computadoras */
 @media  (min-width:1024px) {
+    /*propiedad para que todo el html como minimo ocupe el 100% de toda la pantalla tanto en alto como en ancho*/
     html{
         min-height: 100%;
         min-width: 100%;
     }
+    /*propiedad para definir los atributos del body*/
     body{
         display: block;
         background-color: rgb(102, 102, 102);
         font-family: 'Franklin Gothic Medium';
     }
+    /*propiedad para definir los atributos del video de fondo*/
     .video{
         position: fixed;
         height: 110%;
@@ -516,11 +567,13 @@
         padding: 0;
         opacity: 1;
     }
+    /*propiedad para definir los atributos del header*/
     header{
         position: fixed;
         background-color: #556B51;
         height: 68px;
     }
+    /*Propiedad para definir los atributos del titulo central de la pagina*/
     h1{
         position: relative;
         width: 100%;
@@ -534,21 +587,22 @@
         top: 50%;
         transform: translate(-50%,-50%);
     }
-
-    .texto-ingreso{
+    /*propiedad para el area principal donde se encuentran el ingreso y la salida de texto*/
+    .area-texto{
         width: 100%;
         position: fixed;
         display: flex;
         margin: 0 auto;
         padding: 30px ;
     }
-
+    /*propiedad para definir a la seccion donde se hace el ingreso de texto y estan los botones que indican el funcionamiento*/
     .primera-seccion{
         display: block;
         margin: 0 auto;
         padding: 0 auto;
         width: 50%;
     }
+    /*propiedad para definir al div que contiene al textarea donde se hace el ingreso del mensaje para ser encriptado o desencriptado*/
     .contenedor-input{
         margin: 0 auto;
         display: flex;
@@ -560,7 +614,7 @@
         height:40em;
         cursor: text;
     }
-
+    /*propiedad para definir las dimensiones del text area donde se ingresa el mensaje*/
     #texto-introducido{
         position: relative;
         margin: 1em 1em;
@@ -575,9 +629,17 @@
         background-color: none;
         opacity: 1;
     }
+    /*propiedad para definir la posicion del placeholder*/
     #texto-introducido::placeholder{
         text-align: start;
     }
+    /*propiedad para el texto que advierte que solo se aceptan minusculas*/
+    .advertencia-input{
+        color: #ffffff;
+        text-align: center;
+        padding-top: 1%;
+    }
+    /*propiedad que define el comportamiento de la segunda seccion donde se muestra el texto ya transcripto*/
     .segunda-seccion{
         display: block;
         justify-content: center;
@@ -585,7 +647,7 @@
         padding: 0 auto;
         width: 50%;
     }
-    
+    /*propiedad para definir los atributos del text area del texto ya encriptado o desencriptado*/
     #texto-salida{
         position: fixed;
         background-color: whitesmoke;
@@ -597,6 +659,7 @@
         resize: none;
         border-radius: 3%;
     }
+    /*propiedad que define el comportamiendo del contenedor del text area de salida*/
     .contenedor-salida{
         display:block;
         margin: auto;
@@ -606,6 +669,7 @@
         background-color: white;
         border-radius: 5%;
     }
+    /*propiedad que define el comportamiendo de la imagen del contenedor de salida*/
     .contenedor-salida img{
         position: relative;
         top: 3%;
@@ -616,12 +680,14 @@
         width: 35%;
         height: 35%;
     }
+    /*propiedad que define el comportamiento del titulo en el contenedor de salida*/
     .contenedor-salida h2{
         margin: 10% 0 auto;
         padding: 0 auto;
         display: flex;
         justify-content: center;
     }
+    /*propiedad que define el comportamiento del mensaje en el contenedor de salida*/
     .contenedor-salida p{
         margin: 5% auto;
         padding: 0 auto;
@@ -630,6 +696,7 @@
         text-align: center;
         font-weight: lighter;
     }
+    /*propiedad que define el comportamiento del texto transcripto*/
     .texto-convertido{
         position: relative;
         top: 3%;
@@ -646,7 +713,7 @@
         font-size: medium;
         font-family:'Franklin Gothic Medium';
     }
-
+    /*propiedad que define el comportamiento de posicion de los botones*/
     .botones{
         display: flex;
         width: 95%;
@@ -654,13 +721,13 @@
         margin: 1em auto 2em auto;
         padding: 0 auto;
     }
-
+    /*propiedad que define el comportamiento de los botones de encriptar y desencriptar*/
     .botones-encriptacion{
         display: flex;
         justify-content: center;
         gap: 60%;
     }
-
+    /*propiedad que define la apariencia del boton de encriptar*/
     .encriptar-boton{
         position: relative;
         background-color: #53EB3C;
@@ -676,11 +743,12 @@
         padding: auto 5em;
         transition: 0.5s;
     }
+    /*propiedad que define el comportamiento del boton cuando el puntero del mouse se posiciona sobre este*/
     .encriptar-boton:hover{
         transform: scale(1.05);
         box-shadow: 0px 0px 0.5px 1.5px white;
     }
-
+    /*propiedad que define la apariencia del boton de desencriptar*/
     .desencriptar-boton{
         position: relative;
         background-color: #556B51;
@@ -696,11 +764,12 @@
         padding: auto 5em;
         transition: 0.5s;
     }
+    /*propiedad que define el comportamiento del boton de desencriptar cuando el puntero del mouse se posiciona sobre este*/
     .desencriptar-boton:hover{
         transform: scale(1.05);
         box-shadow: 0px 0px 0.5px 1.5px white;
     }
-
+    /*propiedad que define la apariencia del boton copiar*/
     .boton-copiar{
         position: relative;
         background-color: #53EB3C;
@@ -711,15 +780,18 @@
         height: 3em;
         font-size: 1em;
         font-weight: bold;
+        margin-top: 3%;
         margin-bottom: 15px;
         cursor: pointer;
         justify-content: center;
         transition: 0.5s;
     }
+    /*propiedad que define el comportamiento del boton de copiar cuando el puntero del mouse se posiciona sobre este*/
     .boton-copiar:hover{
         transform: scale(1.05);
         box-shadow: 0px 0px 0.5px 1.5px white;
     }
+    /*propiedad que define la apariencia y comportamiento del footer de la pagina*/
     footer{
         position:fixed;
         bottom: 0;
@@ -727,6 +799,7 @@
         width: 100%;
         height: 4em;
     }
+    /*propiedad que define la apariencia y comportamiento del texto contenido en el footer*/
     footer p{
         position: absolute;
         color: whitesmoke;

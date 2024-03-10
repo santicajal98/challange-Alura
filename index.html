@@ -11,14 +11,17 @@
 <body>
     <video class="video" src="vids/Matrix Rain Codes (4K FULL HD).mp4" muted="false" autoplay="true" loop="true" poster="" playbackRate="0.7"></video>
     <header>
-            <h1>Pagina de Encriptado y Desencriptado de mensajes</h1>
+            <h1>PAGINA DE ENCRIPTADO Y DESENCRIPTADO DE MENSAJES SECRETOS</h1>
     </header>
     <main>
-        <div class="texto-ingreso">
+        <div class="area-texto">
             <div class="primera-seccion">
                 <div class="contenedor-input">
-                    <!-- <input oninput="inputTexto(this.value)" type="text" id="intro" required size="35" placeholder="Ingrese su texto aqui"> -->
-                    <textarea placeholder="Ingrese su texto aqui" oninput="inputTexto(this.value)" name="input" id="texto-introducido" cols="40" rows="30"></textarea>
+                    <!-- En la funcion keypress hago la limitacion para que solo se acepten minusculas, las ñ y los espacios en el ingreso de texto -->
+                    <textarea onkeypress="return (event.charCode >= 97 && event.charCode <= 122 || event.charCode == 32 || event.charCode == 241 )" placeholder="Ingrese su texto aqui" oninput="inputTexto(this.value)" name="input" id="texto-introducido" cols="40" rows="30"></textarea>
+                </div>
+                <div>
+                    <p class="advertencia-input">&#10071 Solo letras minusculas y sin acentos</p>
                 </div>
                 <div class="botones">
                     <div class="botones-encriptacion">
@@ -33,7 +36,7 @@
             </div>
             <div class="segunda-seccion" >
                 <div class="contenedor-salida">
-                    <img id="imagen-salida" src="img/icono.png" alt="">
+                    <img id="imagen-salida" src="img/lupa.png" alt="">
                     <h2 class="titulo-salida">NINGUN MENSAJE ENCONTRADO</h2>
                     <p class="subtitulo-salida">Ingrese un texto para encriptar o desencriptar</p>
                 </div>
@@ -46,7 +49,6 @@
     <footer>
         <p>&copy Copyright Santiago Cajal 2024.Todos los derechos reservados.</p>
     </footer>
-    <!-- <script src="app.js"></script> -->
     <script src="script.js"></script>
 </body>
 </html>
