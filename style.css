@@ -124,6 +124,7 @@
         height: 40em;
         background-color: white;
         border-radius: 5%;
+        box-shadow: 0 0.3em 0.7em 0.7em rgb(150, 150, 150,0.7) ;
     }
     /*propiedad que define el comportamiendo de la imagen del contenedor de salida*/
     .contenedor-salida img{
@@ -398,6 +399,7 @@
         height: 22em;
         background-color: white;
         border-radius: 5%;
+        box-shadow: 0 0.3em 0.7em 0.7em rgb(150, 150, 150,0.7) ;
     }
     /*propiedad que define el comportamiendo de la imagen del contenedor de salida*/
     .contenedor-salida img{
@@ -668,6 +670,7 @@
         height: 40em;
         background-color: white;
         border-radius: 5%;
+        box-shadow: 0 0.3em 0.7em 0.7em rgb(150, 150, 150,0.7) ;
     }
     /*propiedad que define el comportamiendo de la imagen del contenedor de salida*/
     .contenedor-salida img{
